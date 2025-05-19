@@ -100,13 +100,13 @@
     "prompt": "playing trombone"
   },
   {
-    "asva": "video/asva/playing_trumpet/5kXRSxMRZGw_000058_000068-1.0_4.0_clip-00.mp4",
-    "ours": "video/ours/playing_trumpet/5kXRSxMRZGw_000058_000068-1.0_4.0_clip-00.mp4",
+    "asva": "video/asva/playing_trumpet/5An8FmGzxw_000009_000019-0.5_7.0_clip-01.mp4",
+    "ours": "video/ours/playing_trumpet/5An8FmGzxw_000009_000019-0.5_7.0_clip-01.mp4",
     "prompt": "playing trumpet"
   },
   {
-    "asva": "video/asva/playing_trumpet/_5An8FmGzxw_000009_000019-0.5_7.0_clip-01.mp4",
-    "ours": "video/ours/playing_trumpet/_5An8FmGzxw_000009_000019-0.5_7.0_clip-01.mp4",
+    "asva": "video/asva/playing_trumpet/5kXRSxMRZGw_000058_000068-1.0_4.0_clip-00.mp4",
+    "ours": "video/ours/playing_trumpet/5kXRSxMRZGw_000058_000068-1.0_4.0_clip-00.mp4",
     "prompt": "playing trumpet"
   },
   {

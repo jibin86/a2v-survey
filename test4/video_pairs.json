@@ -30,8 +30,8 @@
     "prompt": "chicken crowing"
   },
   {
-    "asva": "video/asva/dog_barking/_52ntwwQyv4_000070_000080-3.5_9.5_clip-01.mp4",
-    "ours": "video/ours/dog_barking/_52ntwwQyv4_000070_000080-3.5_9.5_clip-01.mp4",
+    "asva": "video/asva/dog_barking/52ntwwQyv4_000070_000080-3.5_9.5_clip-01.mp4",
+    "ours": "video/ours/dog_barking/52ntwwQyv4_000070_000080-3.5_9.5_clip-01.mp4",
     "prompt": "dog barking"
   },
   {
