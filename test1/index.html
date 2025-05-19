@@ -1008,8 +1008,10 @@
             console.log(finalResponse); // 최종 응답 확인
             submitButton.disabled = true; // 버튼을 비활성화합니다
             submitButton.innerText = "처리 중..."; // 버튼 텍스트를 변경합니다
-
-            window.location.href = "https://script.google.com/macros/s/AKfycbwaWZfbbWu2-fhE58lQPDzEp2CNDIkV5uJjYLdIT28sOAFuums54sNWBhKcsFcMDTFJ1Q/exec?response=" + finalResponse;
+            var survey_id = "AKfycbwaWZfbbWu2-fhE58lQPDzEp2CNDIkV5uJjYLdIT28sOAFuums54sNWBhKcsFcMDTFJ1Q";
+            window.location.href = "https://script.google.com/macros/s/"+ survey_id +"/exec?response=" + finalResponse;
+            // https://script.google.com/macros/s/AKfycbwaWZfbbWu2-fhE58lQPDzEp2CNDIkV5uJjYLdIT28sOAFuums54sNWBhKcsFcMDTFJ1Q/exec
+            // AKfycbwaWZfbbWu2-fhE58lQPDzEp2CNDIkV5uJjYLdIT28sOAFuums54sNWBhKcsFcMDTFJ1Q
             return finalResponse; // 여기서 finalResponse를 다른 곳에 사용할 수 있습니다.
         } else {
             return null; // 모든 질문에 답하지 않았다면 null 반환
