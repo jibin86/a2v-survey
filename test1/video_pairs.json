@@ -1,0 +1,152 @@
+[
+  {
+    "asva": "video/asva/baby_babbling_crying/5Uodeo_Ln84_000014_000024-6.5_9.5_clip-02.mp4",
+    "ours": "video/ours/baby_babbling_crying/5Uodeo_Ln84_000014_000024-6.5_9.5_clip-02.mp4",
+    "prompt": "baby babbling crying"
+  },
+  {
+    "asva": "video/asva/baby_babbling_crying/6wHFhrAqt5Q_000023_000033_Scene-001-5.5_8.5_clip-02.mp4",
+    "ours": "video/ours/baby_babbling_crying/6wHFhrAqt5Q_000023_000033_Scene-001-5.5_8.5_clip-02.mp4",
+    "prompt": "baby babbling crying"
+  },
+  {
+    "asva": "video/asva/cap_gun_shooting/03fGTwkSBWs_000289_000299-0.0_5.0_clip-01.mp4",
+    "ours": "video/ours/cap_gun_shooting/03fGTwkSBWs_000289_000299-0.0_5.0_clip-01.mp4",
+    "prompt": "cap gun shooting"
+  },
+  {
+    "asva": "video/asva/cap_gun_shooting/3l4alj6RRkM_000547_000557_Scene-002-2.0_6.5_clip-01.mp4",
+    "ours": "video/ours/cap_gun_shooting/3l4alj6RRkM_000547_000557_Scene-002-2.0_6.5_clip-01.mp4",
+    "prompt": "cap gun shooting"
+  },
+  {
+    "asva": "video/asva/chicken_crowing/2OLXoKxJ1qg_000030_000040_Scene-002-0.0_4.5_clip-00.mp4",
+    "ours": "video/ours/chicken_crowing/2OLXoKxJ1qg_000030_000040_Scene-002-0.0_4.5_clip-00.mp4",
+    "prompt": "chicken crowing"
+  },
+  {
+    "asva": "video/asva/chicken_crowing/2baznhAyEsg_000014_000024-5.5_8.5_clip-01.mp4",
+    "ours": "video/ours/chicken_crowing/2baznhAyEsg_000014_000024-5.5_8.5_clip-01.mp4",
+    "prompt": "chicken crowing"
+  },
+  {
+    "asva": "video/asva/dog_barking/2jIv5qBTS88_000009_000019-1.5_5.5_clip-01.mp4",
+    "ours": "video/ours/dog_barking/2jIv5qBTS88_000009_000019-1.5_5.5_clip-01.mp4",
+    "prompt": "dog barking"
+  },
+  {
+    "asva": "video/asva/dog_barking/3qesirWAGt4_000020_000030-0.0_8.0_clip-01.mp4",
+    "ours": "video/ours/dog_barking/3qesirWAGt4_000020_000030-0.0_8.0_clip-01.mp4",
+    "prompt": "dog barking"
+  },
+  {
+    "asva": "video/asva/frog_croaking/6mtnv7SDQqw_000007_000017_Scene-002-0.5_4.5_clip-01.mp4",
+    "ours": "video/ours/frog_croaking/6mtnv7SDQqw_000007_000017_Scene-002-0.5_4.5_clip-01.mp4",
+    "prompt": "frog croaking"
+  },
+  {
+    "asva": "video/asva/frog_croaking/9rWoPW0VU00_000165_000175-0.0_3.0_clip-02.mp4",
+    "ours": "video/ours/frog_croaking/9rWoPW0VU00_000165_000175-0.0_3.0_clip-02.mp4",
+    "prompt": "frog croaking"
+  },
+  {
+    "asva": "video/asva/hammering/0_1Jo7NAhl4_000149_000159-2.5_6.0_clip-01.mp4",
+    "ours": "video/ours/hammering/0_1Jo7NAhl4_000149_000159-2.5_6.0_clip-01.mp4",
+    "prompt": "hammering"
+  },
+  {
+    "asva": "video/asva/hammering/5WbYvoqG3fo_000074_000084-0.0_4.0_clip-02.mp4",
+    "ours": "video/ours/hammering/5WbYvoqG3fo_000074_000084-0.0_4.0_clip-02.mp4",
+    "prompt": "hammering"
+  },
+  {
+    "asva": "video/asva/lions_roaring/3yXCtpvjz6E_000017_000027-1.0_4.5_clip-02.mp4",
+    "ours": "video/ours/lions_roaring/3yXCtpvjz6E_000017_000027-1.0_4.5_clip-02.mp4",
+    "prompt": "lions roaring"
+  },
+  {
+    "asva": "video/asva/lions_roaring/4VBd7XmgsTc_000019_000029-0.0_4.5_clip-01.mp4",
+    "ours": "video/ours/lions_roaring/4VBd7XmgsTc_000019_000029-0.0_4.5_clip-01.mp4",
+    "prompt": "lions roaring"
+  },
+  {
+    "asva": "video/asva/machine_gun_shooting/-njqm6R9Tko_000050_000060-5.5_10.0_clip-02.mp4",
+    "ours": "video/ours/machine_gun_shooting/-njqm6R9Tko_000050_000060-5.5_10.0_clip-02.mp4",
+    "prompt": "machine gun shooting"
+  },
+  {
+    "asva": "video/asva/machine_gun_shooting/FYldIv9lGLU_000141_000151-0.0_6.5_clip-01.mp4",
+    "ours": "video/ours/machine_gun_shooting/FYldIv9lGLU_000141_000151-0.0_6.5_clip-01.mp4",
+    "prompt": "machine gun shooting"
+  },
+  {
+    "asva": "video/asva/playing_cello/6zrX3NgsL7U_000290_000300-0.0_9.5_clip-00.mp4",
+    "ours": "video/ours/playing_cello/6zrX3NgsL7U_000290_000300-0.0_9.5_clip-00.mp4",
+    "prompt": "playing cello"
+  },
+  {
+    "asva": "video/asva/playing_cello/OIGvCw4UUYk_000616_000626-3.0_10.0_clip-02.mp4",
+    "ours": "video/ours/playing_cello/OIGvCw4UUYk_000616_000626-3.0_10.0_clip-02.mp4",
+    "prompt": "playing cello"
+  },
+  {
+    "asva": "video/asva/playing_trombone/22mgtk4Iw0M_000113_000123-0.0_10.0_clip-02.mp4",
+    "ours": "video/ours/playing_trombone/22mgtk4Iw0M_000113_000123-0.0_10.0_clip-02.mp4",
+    "prompt": "playing trombone"
+  },
+  {
+    "asva": "video/asva/playing_trombone/3vhWXxE_X0M_000028_000038_Scene-001-0.0_7.0_clip-00.mp4",
+    "ours": "video/ours/playing_trombone/3vhWXxE_X0M_000028_000038_Scene-001-0.0_7.0_clip-00.mp4",
+    "prompt": "playing trombone"
+  },
+  {
+    "asva": "video/asva/playing_trumpet/0bC2T-xZkCs_000187_000197-0.0_3.0_clip-00.mp4",
+    "ours": "video/ours/playing_trumpet/0bC2T-xZkCs_000187_000197-0.0_3.0_clip-00.mp4",
+    "prompt": "playing trumpet"
+  },
+  {
+    "asva": "video/asva/playing_trumpet/3cThgRIaqgU_000016_000026-0.5_9.0_clip-00.mp4",
+    "ours": "video/ours/playing_trumpet/3cThgRIaqgU_000016_000026-0.5_9.0_clip-00.mp4",
+    "prompt": "playing trumpet"
+  },
+  {
+    "asva": "video/asva/playing_violin__fiddle/0s49D-LqHwg_000030_000040-2.0_5.0_clip-00.mp4",
+    "ours": "video/ours/playing_violin__fiddle/0s49D-LqHwg_000030_000040-2.0_5.0_clip-00.mp4",
+    "prompt": "playing violin  fiddle"
+  },
+  {
+    "asva": "video/asva/playing_violin__fiddle/74BDV0z_bvw_000030_000040-0.5_9.5_clip-02.mp4",
+    "ours": "video/ours/playing_violin__fiddle/74BDV0z_bvw_000030_000040-0.5_9.5_clip-02.mp4",
+    "prompt": "playing violin  fiddle"
+  },
+  {
+    "asva": "video/asva/sharpen_knife/-1rZFviqTTQ_000028_000038-3.5_5.8_clip-00.mp4",
+    "ours": "video/ours/sharpen_knife/-1rZFviqTTQ_000028_000038-3.5_5.8_clip-00.mp4",
+    "prompt": "sharpen knife"
+  },
+  {
+    "asva": "video/asva/sharpen_knife/5Y_8wiKVwK0_000186_000196-6.5_9.5_clip-00.mp4",
+    "ours": "video/ours/sharpen_knife/5Y_8wiKVwK0_000186_000196-6.5_9.5_clip-00.mp4",
+    "prompt": "sharpen knife"
+  },
+  {
+    "asva": "video/asva/striking_bowling/1gadod9llZY_000046_000056-4.5_8.5_clip-02.mp4",
+    "ours": "video/ours/striking_bowling/1gadod9llZY_000046_000056-4.5_8.5_clip-02.mp4",
+    "prompt": "striking bowling"
+  },
+  {
+    "asva": "video/asva/striking_bowling/9kNLBpyWntg_000320_000330_Scene-002-1.5_4.5_clip-01.mp4",
+    "ours": "video/ours/striking_bowling/9kNLBpyWntg_000320_000330_Scene-002-1.5_4.5_clip-01.mp4",
+    "prompt": "striking bowling"
+  },
+  {
+    "asva": "video/asva/toilet_flushing/1AfCMvhZJVY_000040_000050-0.5_3.5_clip-01.mp4",
+    "ours": "video/ours/toilet_flushing/1AfCMvhZJVY_000040_000050-0.5_3.5_clip-01.mp4",
+    "prompt": "toilet flushing"
+  },
+  {
+    "asva": "video/asva/toilet_flushing/8PJoXe_XFe8_000030_000040-3.0_6.0_clip-01.mp4",
+    "ours": "video/ours/toilet_flushing/8PJoXe_XFe8_000030_000040-3.0_6.0_clip-01.mp4",
+    "prompt": "toilet flushing"
+  }
+]
