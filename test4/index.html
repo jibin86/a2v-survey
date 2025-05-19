@@ -128,23 +128,23 @@
 
       <br><br><br>
     <div class="columns is-centered has-text-centered">
-        <h4 class="title is-5"> Videos are generated with given text prompts.</h4>
+        <h4 class="title is-5"> Videos are generated with given text, image, and audio inputs.</h4>
     </div>
     <div class="columns is-centered has-text-centered">
         <h4 class="title is-5"> Please consider it and look at the questions and choose your options</h4>
     </div>
     <div class="columns is-centered has-text-centered">    
-        <h4 class="title is-5"> Please exclude the size of the video and the presence or absence of a watermark from the evaluation.</h4>
+        <h4 class="title is-5"> It may take a little time for all videos to load. We appreciate your patience.</h4>
     </div>
     <br>
     <div class="columns is-centered has-text-centered"> 
-        <h4 class="title is-5"> 주어진 텍스트에 맞게 생성된 영상입니다.</h4>
+        <h4 class="title is-5"> 주어진 텍스트, 이미지, 오디오에 맞게 생성된 영상입니다.</h4>
     </div>
     <div class="columns is-centered has-text-centered"> 
         <h4 class="title is-5"> 이를 참고하여 질문을 보시고 옵션을 선택해주세요.</h4>
     </div>
     <div class="columns is-centered has-text-centered"> 
-        <h4 class="title is-5"> 영상의 크기와 워터마크 유무는 평가에서 제외해주세요.</h4>
+        <h4 class="title is-5"> 영상이 로드되기까지 다소 시간이 걸릴 수 있습니다. 잠시만 기다려 주시면 감사하겠습니다.</h4>
     </div>
     <br><br><br>
     <script>
@@ -243,10 +243,10 @@
                 submitBtn.addEventListener("click", getFinalResponse);
       
               // ✅ 질문 텍스트는 이 시점 이후에 넣어야 함!
-              // var question1Text = "<b>Q1.</b> 어떤 동영상이 프레임 단위로 퀄리티가 더 좋나요? <br> Which video has better individual frame quality?";
-              var question1Text = "<b>Q1.</b> 어떤 동영상이 프레임 단위로 더 자연스럽고 선명하게 보이나요?<br>Which video has better individual frame quality in terms of naturalness and clarity?";
-              var question2Text = "<b>Q2.</b> 어떤 동영상이 프레임 간 깜빡임이나 튐 없이 부드럽고 일관되게 재생되나요? <br> Which video is more visually consistent across frames, without flickering or sudden jumps?";
-              var question3Text = "<b>Q3.</b> 어떤 동영상이 오디오 타이밍과 움직임이 더 자연스럽게 맞춰져 있나요? <br> Which video is better synchronized with the audio in terms of motion timing?";
+              // var question1Text = "<b>Q1.</b> 어떤 영상이 프레임 단위로 퀄리티가 더 좋나요? <br> Which video has better individual frame quality?";
+              var question1Text = "<b>Q1.</b> 어떤 영상이 프레임 단위로 더 자연스럽고 선명하게 보이나요?<br>Which video has better individual frame quality in terms of naturalness and clarity?";
+              var question2Text = "<b>Q2.</b> 어떤 영상이 프레임 간 깜빡임이나 튐 없이 부드럽고 일관되게 재생되나요? <br> Which video is more visually consistent across frames, without flickering or sudden jumps?";
+              var question3Text = "<b>Q3.</b> 어떤 영상이 오디오 타이밍과 움직임이 더 자연스럽게 맞춰져 있나요? <br> Which video is better synchronized with the audio in terms of motion timing?";
       
               var questions1 = document.getElementsByClassName('question1');
               for (var i = 0; i < questions1.length; i++) {
