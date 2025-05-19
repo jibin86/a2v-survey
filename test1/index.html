@@ -114,6 +114,105 @@
         </div>
       </section>
 
+    <script>
+        const classNames = [
+          "a_boat", "robot_dj", "anime_girl", "yosemite", "white_wolf", "robot_warrior",
+          "lightning", "sunrise_mars", "castle", "balloon", "goldendoodle",
+          "teddy", "sheep", "goldenwater", "panda"
+        ];
+        
+        const baselines = ["baselineA", "baselineB"];
+        
+        const prompts = {
+          a_boat: "A boat sailing rapidly in a lake, in the style of a neo retro poster, matte drawing, outrun color palette.",
+          robot_dj: "Robot DJ playing the turntable in futuristic Tokyo, cyberpunk night...",
+          anime_girl: "A cute anime girl looks at the beautiful nature through the window of a moving train...",
+          yosemite: "A stunning aerial drone footage time lapse of El Capitan in Yosemite National Park at sunset.",
+          white_wolf: "A cartoon white wolf is giving a puppy-dog eyes, 3d concept, detailed fur...",
+          robot_warrior: "Zoom in video of a robot warrior, ultra realistic, concept art, photorealistic...",
+          lightning: "A lightning striking atop of Eiffel tower, dark clouds, slow motion.",
+          sunrise_mars: "A beautiful sunrise on Mars, Curiosity rover, high definition, timelapse...",
+          castle: "View of a castle with fantastically high towers reaching into the clouds...",
+          balloon: "Balloon full of water exploding in extreme slow motion.",
+          goldendoodle: "A goldendoodle playing in a park by a lake.",
+          teddy: "A teddy bear washing the dishes.",
+          sheep: "A sheep to the right of a wine glass.",
+          goldenwater: "A shiny golden waterfall flowing through glacier at night.",
+          panda: "A panda taking a selfie."
+        };
+        
+        const wrapper = document.createElement("div");
+        
+        classNames.forEach((className, idx) => {
+          const section = document.createElement("section");
+          const subtitle = document.createElement("h2");
+          subtitle.className = "subtitle has-text-centered";
+          subtitle.textContent = `${idx}. ${prompts[className]}`;
+          section.appendChild(subtitle);
+        
+          const container = document.createElement("div");
+          container.className = "video-container";
+          container.style.cssText = "display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;";
+        
+          baselines.forEach((baseline, i) => {
+            const figure = document.createElement("figure");
+            figure.style.cssText = "flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);";
+        
+            const video = document.createElement("video");
+            video.setAttribute("autoplay", true);
+            video.setAttribute("muted", true);
+            video.setAttribute("loop", true);
+            video.setAttribute("playsinline", true);
+            video.style.cssText = "width: 100%; height: auto; object-fit: contain;";
+            
+            const source = document.createElement("source");
+            source.setAttribute("type", "video/mp4");
+            source.setAttribute("src", `video/${baseline}/${className}/${className}.mp4`);
+            video.appendChild(source);
+        
+            const caption = document.createElement("figcaption");
+            caption.textContent = `${i + 1}번 영상, ${i + 1}st video`;
+        
+            figure.appendChild(video);
+            figure.appendChild(caption);
+            container.appendChild(figure);
+          });
+        
+          const questions = ["motion", "consistency", "quality"];
+          questions.forEach((q, qi) => {
+            const div = document.createElement("div");
+            div.className = "question";
+            const p = document.createElement("p");
+            p.className = `question${qi + 1}`;
+            div.appendChild(p);
+        
+            for (let i = 1; i <= 2; i++) {
+              const input = document.createElement("input");
+              input.type = "radio";
+              input.id = `${q}${i}`;
+              input.name = q;
+              input.value = i;
+        
+              const label = document.createElement("label");
+              label.setAttribute("for", `${q}${i}`);
+              label.textContent = `${i}번 영상 - ${i}st Video`;
+        
+              div.appendChild(input);
+              div.appendChild(label);
+              div.appendChild(document.createElement("br"));
+            }
+        
+            container.appendChild(div);
+          });
+        
+          section.appendChild(container);
+          wrapper.appendChild(section);
+        });
+        
+        document.body.appendChild(wrapper);
+    </script>
+        
+
       <div class="columns is-centered has-text-centered">
         <h3 class="title is-4"> This content is optimized for desktop viewing and for Chrome. <br>It may not be suitable for mobile devices or other Web browser.</h3>
       </div>
@@ -147,811 +246,6 @@
         <h4 class="title is-5"> 영상의 크기와 워터마크 유무는 평가에서 제외해주세요.</h4>
     </div>
     <br><br><br>
-      <section>
-      <h2 class="subtitle has-text-centered">
-        A boat sailing rapidly in a lake, in the style of a neo retro poster, matte drawing, outrun color palette.
-      </h2>
-      
-      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/a_boat_sailing_and_floating_rapidly_in_a_lake.mp4" /> 
-          </video>
-          <figcaption>1번 영상, 1st video</figcaption>
-        </figure>
-        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                <source type="video/mp4" src="video/A_boat_sailing_rapidly_in_a_la_W432H256_37.5_0.3_15_MG40___.mp4" /> 
-            </video>
-            <figcaption>2번 영상, 2nd video</figcaption>
-        </figure>
-        
-        <div class="question">
-            <p class="question1"></p>
-            <input type="radio" id="motion1" name="motion" value="1">
-            <label for="motion1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="motion2" name="motion" value="2">
-            <label for="motion2">2번 영상 - 2nd Video</label>
-        </div>
-        <div class="question">
-            <p class="question2"></p>
-            <input type="radio" id="consistency1" name="consistency" value="1">
-            <label for="consistency1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="consistency2" name="consistency" value="2">
-            <label for="consistency2">2번 영상 - 2nd Video</label>
-        </div>
-        <div class="question">
-            <p class="question3"></p>
-            <input type="radio" id="quality1" name="quality" value="1">
-            <label for="quality1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="quality2" name="quality" value="2">
-            <label for="quality2">2번 영상 - 2nd Video</label>
-        </div>
-      </div>
-      
-      </section>
-
-<!-- ============================= -->
-      <br>
-      <br>
-      <section>
-      <h2 class="subtitle has-text-centered">
-        Robot dj playing the turntable, in heavy raining futuristic tokyo rooftop cyberpunk night, sci-fi, fantasy, intricate, elegant, neon light, highly detailed, concept art, soft light, smooth, sharp focus, illustration.
-      </h2>
-      
-      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/a_robot_dj_is_playing_the_turntable,_ultra_realistic,_concept_2.mp4" /> 
-          </video>
-          <figcaption>1번 영상, 1st video</figcaption>
-        </figure>
-        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                <source type="video/mp4" src="video/A_robot_dj_is_playing_the_turn_W432H256_37.5_0.3_15_MG40___.mp4" /> 
-            </video>
-            <figcaption>2번 영상, 2nd video</figcaption>
-        </figure>
-        
-        <div class="question">
-            <p class="question1"></p>
-            <input type="radio" id="motion" name="motion" value="1">
-            <label for="motion1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="motion2" name="motion" value="2">
-            <label for="motion2">2번 영상 - 2nd Video</label>
-        </div>
-        <div class="question">
-            <p class="question2"></p>
-            <input type="radio" id="consistency1" name="consistency" value="1">
-            <label for="consistency1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="consistency2" name="consistency" value="2">
-            <label for="consistency2">2번 영상 - 2nd Video</label>
-        </div>
-        <div class="question">
-            <p class="question3"></p>
-            <input type="radio" id="quality1" name="quality" value="1">
-            <label for="quality1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="quality2" name="quality" value="2">
-            <label for="quality2">2번 영상 - 2nd Video</label>
-        </div>
-      </div>
-      
-      </section>
-    <!-- ============================= -->
-    <!-- ============================= -->
-    <br>
-    <br>
-    <section>
-    <h2 class="subtitle has-text-centered">
-        A cute anime girl looks at the beautiful nature through the window of a moving train, well rendered, 3D rendered.
-    </h2>
-    
-    <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-            <source type="video/mp4" src="video/a_cute_anime_girl_looks_at_the_beautiful_nature_through.mp4" /> 
-        </video>
-        <figcaption>1번 영상, 1st video</figcaption>
-      </figure>
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/anime.mp4" /> 
-          </video>
-          <figcaption>2번 영상, 2nd video</figcaption>
-      </figure>
-      
-      <div class="question">
-          <p class="question1"></p>
-          <input type="radio" id="motion" name="motion" value="1">
-          <label for="motion1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="motion2" name="motion" value="2">
-          <label for="motion2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question2"></p>
-          <input type="radio" id="consistency1" name="consistency" value="1">
-          <label for="consistency1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="consistency2" name="consistency" value="2">
-          <label for="consistency2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question3"></p>
-          <input type="radio" id="quality1" name="quality" value="1">
-          <label for="quality1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="quality2" name="quality" value="2">
-          <label for="quality2">2번 영상 - 2nd Video</label>
-      </div>
-    </div>
-    
-    </section>
-  <!-- ============================= -->
-    <!-- ============================= -->
-    <br>
-    <br>
-    <section>
-    <h2 class="subtitle has-text-centered">
-        A stunning aerial drone footage time lapse of El Capitan in Yosemite National Park at sunset.
-    </h2>
-    
-    <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-            <source type="video/mp4" src="video/A_stunning_aerial_drone_footag_W432H256_17.5_0.3_15_MG40___.mp4" /> 
-        </video>
-        <figcaption>1번 영상, 1st video</figcaption>
-      </figure>
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/yosemiti.mp4" /> 
-          </video>
-          <figcaption>2번 영상, 2nd video</figcaption>
-      </figure>
-      
-      <div class="question">
-          <p class="question1"></p>
-          <input type="radio" id="motion1" name="motion" value="1">
-          <label for="motion1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="motion2" name="motion" value="2">
-          <label for="motion2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question2"></p>
-          <input type="radio" id="consistency1" name="consistency" value="1">
-          <label for="consistency1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="consistency2" name="consistency" value="2">
-          <label for="consistency2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question3"></p>
-          <input type="radio" id="quality1" name="quality" value="1">
-          <label for="quality1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="quality2" name="quality" value="2">
-          <label for="quality2">2번 영상 - 2nd Video</label>
-      </div>
-    </div>
-    
-    </section>
-  <!-- ============================= -->
-      <!-- ============================= -->
-      <br>
-      <br>
-      <section>
-      <h2 class="subtitle has-text-centered">
-        A cartoon white wolf is giving a puppy-dog eyes, anthro, very cute kid's film character, concept artwork, 3d concept, detailed fur, high detail iconic character for upcoming film.
-      </h2>
-      
-      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/A_cartoon_white_wolf_is_giving_W432H256_07.5_0.3_15_MG40___.mp4" /> 
-          </video>
-          <figcaption>1번 영상, 1st video</figcaption>
-        </figure>
-        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                <source type="video/mp4" src="video/A_cartoon_white_wolf_is_giving_a_puppy-dog eyes,_anthro.mp4" /> 
-            </video>
-            <figcaption>2번 영상, 2nd video</figcaption>
-        </figure>
-        
-        <div class="question">
-            <p class="question1"></p>
-            <input type="radio" id="motion1" name="motion" value="1">
-            <label for="motion1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="motion2" name="motion" value="2">
-            <label for="motion2">2번 영상 - 2nd Video</label>
-        </div>
-        <div class="question">
-            <p class="question2"></p>
-            <input type="radio" id="consistency1" name="consistency" value="1">
-            <label for="consistency1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="consistency2" name="consistency" value="2">
-            <label for="consistency2">2번 영상 - 2nd Video</label>
-        </div>
-        <div class="question">
-            <p class="question3"></p>
-            <input type="radio" id="quality1" name="quality" value="1">
-            <label for="quality1">1번 영상 - 1st Video</label><br>
-            <input type="radio" id="quality2" name="quality" value="2">
-            <label for="quality2">2번 영상 - 2nd Video</label>
-        </div>
-      </div>
-      
-      </section>
-    <!-- ============================= -->
-
-
-
-
-
-
-
-
-        <!-- ============================= -->
-        <br>
-        <br>
-        <section>
-        <h2 class="subtitle has-text-centered">
-            Zoom in video of a robot warrior, ultra realistic, concept art, intricate details, highly detailed, photorealistic, 8k, sharp focus, volumetric lighting unreal engine.
-        </h2>
-        
-        <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-          <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                <source type="video/mp4" src="video/Zoom_in_video_of_a_robot_warri_W432H256_27.5_0.3_15_MG40___.mp4" /> 
-            </video>
-            <figcaption>1번 영상, 1st video</figcaption>
-          </figure>
-          <figure  class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(40% - 10px);">
-              <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                  <source type="video/mp4" src="video/Zoom_in_video_of_a_robot_warrior,_ultra_realistic,_concept2.mp4" /> 
-              </video>
-              <figcaption>2번 영상, 2nd video</figcaption>
-          </figure>
-          
-          <div class="question">
-              <p class="question1"></p>
-              <input type="radio" id="motion1" name="motion" value="1">
-              <label for="motion1">1번 영상 - 1st Video</label><br>
-              <input type="radio" id="motion2" name="motion" value="2">
-              <label for="motion2">2번 영상 - 2nd Video</label>
-          </div>
-          <div class="question">
-              <p class="question2"></p>
-              <input type="radio" id="consistency1" name="consistency" value="1">
-              <label for="consistency1">1번 영상 - 1st Video</label><br>
-              <input type="radio" id="consistency2" name="consistency" value="2">
-              <label for="consistency2">2번 영상 - 2nd Video</label>
-          </div>
-          <div class="question">
-              <p class="question3"></p>
-              <input type="radio" id="quality1" name="quality" value="1">
-              <label for="quality1">1번 영상 - 1st Video</label><br>
-              <input type="radio" id="quality2" name="quality" value="2">
-              <label for="quality2">2번 영상 - 2nd Video</label>
-          </div>
-        </div>
-        
-        </section>
-      <!-- ============================= -->
-              <!-- ============================= -->
-              <br>
-              <br>
-              <section>
-              <h2 class="subtitle has-text-centered">
-                A lightning striking atop of eiffel tower, dark clouds in the sky, slow motion.
-              </h2>
-              
-              <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-                <figure class="custom-video-container">
-                    <!-- <figure style="flex-basis: calc(50% - 10px); max-width: calc(40% - 10px);"> -->
-                  <video autoplay muted loop playsinline> 
-                      <source type="video/mp4" src="video/a_lightning_striking_atop_of_eiffel_tower,_sparks,_lightning_storm.mp4" /> 
-                  </video>
-                  <figcaption>1번 영상, 1st video</figcaption>
-                </figure>
-                <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                        <source type="video/mp4" src="video/A_lightning_striking_atop_of_e_W432H256_47.5_0.3_15_MG40___.mp4" /> 
-                    </video>
-                    <figcaption>2번 영상, 2nd video</figcaption>
-                </figure>
-                
-                <div class="question">
-                    <p class="question1"></p>
-                    <input type="radio" id="motion1" name="motion" value="1">
-                    <label for="motion1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="motion2" name="motion" value="2">
-                    <label for="motion2">2번 영상 - 2nd Video</label>
-                </div>
-                <div class="question">
-                    <p class="question2"></p>
-                    <input type="radio" id="consistency1" name="consistency" value="1">
-                    <label for="consistency1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="consistency2" name="consistency" value="2">
-                    <label for="consistency2">2번 영상 - 2nd Video</label>
-                </div>
-                <div class="question">
-                    <p class="question3"></p>
-                    <input type="radio" id="quality1" name="quality" value="1">
-                    <label for="quality1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="quality2" name="quality" value="2">
-                    <label for="quality2">2번 영상 - 2nd Video</label>
-                </div>
-              </div>
-              
-              </section>
-            <!-- ============================= -->
-                  <!-- ============================= -->
-                  <br>
-                  <br>
-                  <section>
-                  <h2 class="subtitle has-text-centered">
-                    A beautiful sunrise on mars, Curiosity rover. High definition, timelapse, dramatic colors.
-                  </h2>
-                  
-                  <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-                    <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                      <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                          <source type="video/mp4" src="video/mar.mp4" /> 
-                      </video>
-                      <figcaption>1번 영상, 1st video</figcaption>
-                    </figure>
-                    <figure  class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                            <source type="video/mp4" src="video/A_beautiful_sunrise_on_mars,_C_W432H256_47.5_0.3_15_MG40___.mp4" /> 
-                        </video>
-                        <figcaption>2번 영상, 2nd video</figcaption>
-                    </figure>
-                    
-                    <div class="question">
-                        <p class="question1"></p>
-                        <input type="radio" id="motion1" name="motion" value="1">
-                        <label for="motion1">1번 영상 - 1st Video</label><br>
-                        <input type="radio" id="motion2" name="motion" value="2">
-                        <label for="motion2">2번 영상 - 2nd Video</label>
-                    </div>
-                    <div class="question">
-                        <p class="question2"></p>
-                        <input type="radio" id="consistency1" name="consistency" value="1">
-                        <label for="consistency1">1번 영상 - 1st Video</label><br>
-                        <input type="radio" id="consistency2" name="consistency" value="2">
-                        <label for="consistency2">2번 영상 - 2nd Video</label>
-                    </div>
-                    <div class="question">
-                        <p class="question3"></p>
-                        <input type="radio" id="quality1" name="quality" value="1">
-                        <label for="quality1">1번 영상 - 1st Video</label><br>
-                        <input type="radio" id="quality2" name="quality" value="2">
-                        <label for="quality2">2번 영상 - 2nd Video</label>
-                    </div>
-                  </div>
-                  
-                  </section>
-                <!-- ============================= -->
-                      <!-- ============================= -->
-                      <br>
-                      <br>
-                      <section>
-                      <h2 class="subtitle has-text-centered">
-                        View of a castle with fantastically high towers reaching into the clouds in a hilly forest at dawn.
-                      </h2>
-                      
-                      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-                        <figure  class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                              <source type="video/mp4" src="video/View_of_a_castle_with_fantasti_W432H256_07.5_0.3_15_MG40___.mp4" /> 
-                          </video>
-                          <figcaption>1번 영상, 1st video</figcaption>
-                        </figure>
-                        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                                <source type="video/mp4" src="video/castle.mp4" /> 
-                            </video>
-                            <figcaption>2번 영상, 2nd video</figcaption>
-                        </figure>
-                        
-                        <div class="question">
-                            <p class="question1"></p>
-                            <input type="radio" id="motion1" name="motion" value="1">
-                            <label for="motion1">1번 영상 - 1st Video</label><br>
-                            <input type="radio" id="motion2" name="motion" value="2">
-                            <label for="motion2">2번 영상 - 2nd Video</label>
-                        </div>
-                        <div class="question">
-                            <p class="question2"></p>
-                            <input type="radio" id="consistency1" name="consistency" value="1">
-                            <label for="consistency1">1번 영상 - 1st Video</label><br>
-                            <input type="radio" id="consistency2" name="consistency" value="2">
-                            <label for="consistency2">2번 영상 - 2nd Video</label>
-                        </div>
-                        <div class="question">
-                            <p class="question3"></p>
-                            <input type="radio" id="quality1" name="quality" value="1">
-                            <label for="quality1">1번 영상 - 1st Video</label><br>
-                            <input type="radio" id="quality2" name="quality" value="2">
-                            <label for="quality2">2번 영상 - 2nd Video</label>
-                        </div>
-                      </div>
-                      
-                      </section>
-                    <!-- ============================= -->
-                                      <!-- ============================= -->
-                  <br>
-                  <br>
-                  <section>
-                  <h2 class="subtitle has-text-centered">
-                    Balloon full of water exploding in extreme slow motion.
-                  </h2>
-                  
-                  <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-                    <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                      <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                          <source type="video/mp4" src="video/balloonwater.mp4" /> 
-                      </video>
-                      <figcaption>1번 영상, 1st video</figcaption>
-                    </figure>
-                    <figure class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                            <source type="video/mp4" src="video/Balloon_full_of_water_explodin_18_MG20___.mp4" /> 
-                        </video>
-                        <figcaption>2번 영상, 2nd video</figcaption>
-                    </figure>
-                    
-                    <div class="question">
-                        <p class="question1"></p>
-                        <input type="radio" id="motion1" name="motion" value="1">
-                        <label for="motion1">1번 영상 - 1st Video</label><br>
-                        <input type="radio" id="motion2" name="motion" value="2">
-                        <label for="motion2">2번 영상 - 2nd Video</label>
-                    </div>
-                    <div class="question">
-                        <p class="question2"></p>
-                        <input type="radio" id="consistency1" name="consistency" value="1">
-                        <label for="consistency1">1번 영상 - 1st Video</label><br>
-                        <input type="radio" id="consistency2" name="consistency" value="2">
-                        <label for="consistency2">2번 영상 - 2nd Video</label>
-                    </div>
-                    <div class="question">
-                        <p class="question3"></p>
-                        <input type="radio" id="quality1" name="quality" value="1">
-                        <label for="quality1">1번 영상 - 1st Video</label><br>
-                        <input type="radio" id="quality2" name="quality" value="2">
-                        <label for="quality2">2번 영상 - 2nd Video</label>
-                    </div>
-                  </div>
-                  
-                  </section>
-                <!-- ============================= -->
-                <!-- ============================= -->
-                <br>
-                <br>
-                <section>
-                <h2 class="subtitle has-text-centered">
-                    A goldendoodle playing in a park by a lake.
-                </h2>
-                
-                <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-                <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                        <source type="video/mp4" src="video/dog2.mp4" /> 
-                    </video>
-                    <figcaption>1번 영상, 1st video</figcaption>
-                </figure>
-                <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                        <source type="video/mp4" src="video/A_goldendoodle_playing_in_a_pa_W432H256_27.5_0.3_15_MG40___.mp4" /> 
-                    </video>
-                    <figcaption>2번 영상, 2nd video</figcaption>
-                </figure>
-                
-                <div class="question">
-                    <p class="question1"></p>
-                    <input type="radio" id="motion1" name="motion" value="1">
-                    <label for="motion1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="motion2" name="motion" value="2">
-                    <label for="motion2">2번 영상 - 2nd Video</label>
-                </div>
-                <div class="question">
-                    <p class="question2"></p>
-                    <input type="radio" id="consistency1" name="consistency" value="1">
-                    <label for="consistency1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="consistency2" name="consistency" value="2">
-                    <label for="consistency2">2번 영상 - 2nd Video</label>
-                </div>
-                <div class="question">
-                    <p class="question3"></p>
-                    <input type="radio" id="quality1" name="quality" value="1">
-                    <label for="quality1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="quality2" name="quality" value="2">
-                    <label for="quality2">2번 영상 - 2nd Video</label>
-                </div>
-                </div>
-                
-                </section>
-            <!-- ============================= -->
-                <!-- ============================= -->
-                <br>
-                <br>
-                <section>
-                <h2 class="subtitle has-text-centered">
-                    A teddy bear washing the dishes.
-                </h2>
-                
-                <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-                <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                        <source type="video/mp4" src="video/A_teddy_bear_washing_the_dishe_W432H256_27.5_0.3_15_MG40___.mp4" /> 
-                    </video>
-                    <figcaption>1번 영상, 1st video</figcaption>
-                </figure>
-                <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                        <source type="video/mp4" src="video/teddy_wash.mp4" /> 
-                    </video>
-                    <figcaption>2번 영상, 2nd video</figcaption>
-                </figure>
-                
-                <div class="question">
-                    <p class="question1"></p>
-                    <input type="radio" id="motion1" name="motion" value="1">
-                    <label for="motion1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="motion2" name="motion" value="2">
-                    <label for="motion2">2번 영상 - 2nd Video</label>
-                </div>
-                <div class="question">
-                    <p class="question2"></p>
-                    <input type="radio" id="consistency1" name="consistency" value="1">
-                    <label for="consistency1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="consistency2" name="consistency" value="2">
-                    <label for="consistency2">2번 영상 - 2nd Video</label>
-                </div>
-                <div class="question">
-                    <p class="question3"></p>
-                    <input type="radio" id="quality1" name="quality" value="1">
-                    <label for="quality1">1번 영상 - 1st Video</label><br>
-                    <input type="radio" id="quality2" name="quality" value="2">
-                    <label for="quality2">2번 영상 - 2nd Video</label>
-                </div>
-                </div>
-                
-                </section>
-            <!-- ============================= -->
-             <!-- ============================= -->
-             <br>
-             <br>
-             <section>
-             <h2 class="subtitle has-text-centered">
-                A sheep to the right of a wine glass.
-             </h2>
-             
-             <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-             <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                 <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                     <source type="video/mp4" src="video/sheep.mp4" /> 
-                 </video>
-                 <figcaption>1번 영상, 1st video</figcaption>
-             </figure>
-             <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                 <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                     <source type="video/mp4" src="video/A_sheep_to_the_right_of_a_wine_W432H256_47.5_0.3_15_MG40___.mp4" /> 
-                 </video>
-                 <figcaption>2번 영상, 2nd video</figcaption>
-             </figure>
-             
-             <div class="question">
-                 <p class="question1"></p>
-                 <input type="radio" id="motion1" name="motion" value="1">
-                 <label for="motion1">1번 영상 - 1st Video</label><br>
-                 <input type="radio" id="motion2" name="motion" value="2">
-                 <label for="motion2">2번 영상 - 2nd Video</label>
-             </div>
-             <div class="question">
-                 <p class="question2"></p>
-                 <input type="radio" id="consistency1" name="consistency" value="1">
-                 <label for="consistency1">1번 영상 - 1st Video</label><br>
-                 <input type="radio" id="consistency2" name="consistency" value="2">
-                 <label for="consistency2">2번 영상 - 2nd Video</label>
-             </div>
-             <div class="question">
-                 <p class="question3"></p>
-                 <input type="radio" id="quality1" name="quality" value="1">
-                 <label for="quality1">1번 영상 - 1st Video</label><br>
-                 <input type="radio" id="quality2" name="quality" value="2">
-                 <label for="quality2">2번 영상 - 2nd Video</label>
-             </div>
-             </div>
-             
-             </section>
-         <!-- ============================= -->
-         <!-- ============================= -->
-         <br>
-         <br>
-         <section>
-         <h2 class="subtitle has-text-centered">
-            A shiny golden waterfall flowing through glacier at night.
-         </h2>
-         
-         <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-             <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                 <source type="video/mp4" src="video/A_shiny_golden_waterfall_flowi_W432H256_27.5_0.3_15_MG40___.mp4" /> 
-             </video>
-             <figcaption>1번 영상, 1st video</figcaption>
-         </figure>
-         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-             <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-                 <source type="video/mp4" src="video/goldenwater.mp4" /> 
-             </video>
-             <figcaption>2번 영상, 2nd video</figcaption>
-         </figure>
-         
-         <div class="question">
-             <p class="question1"></p>
-             <input type="radio" id="motion1" name="motion" value="1">
-             <label for="motion1">1번 영상 - 1st Video</label><br>
-             <input type="radio" id="motion2" name="motion" value="2">
-             <label for="motion2">2번 영상 - 2nd Video</label>
-         </div>
-         <div class="question">
-             <p class="question2"></p>
-             <input type="radio" id="consistency1" name="consistency" value="1">
-             <label for="consistency1">1번 영상 - 1st Video</label><br>
-             <input type="radio" id="consistency2" name="consistency" value="2">
-             <label for="consistency2">2번 영상 - 2nd Video</label>
-         </div>
-         <div class="question">
-             <p class="question3"></p>
-             <input type="radio" id="quality1" name="quality" value="1">
-             <label for="quality1">1번 영상 - 1st Video</label><br>
-             <input type="radio" id="quality2" name="quality" value="2">
-             <label for="quality2">2번 영상 - 2nd Video</label>
-         </div>
-         </div>
-         
-         </section>
-     <!-- ============================= -->
-     <!-- ============================= -->
-     <br>
-     <br>
-     <section>
-     <h2 class="subtitle has-text-centered">
-        Anime girl looking through a window of a stars and space, sci-fi.
-     </h2>
-     
-     <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-     <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-         <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-             <source type="video/mp4" src="video/Anime_girl_looking_through_a_w_W432H256_47.5_0.3_15_MG40___.mp4" /> 
-         </video>
-         <figcaption>1번 영상, 1st video</figcaption>
-     </figure>
-     <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-         <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-             <source type="video/mp4" src="video/Anime_girl_looking_through_a_window_of_a_spaceship,_sci-fi.mp4" /> 
-         </video>
-         <figcaption>2번 영상, 2nd video</figcaption>
-     </figure>
-     
-     <div class="question">
-         <p class="question1"></p>
-         <input type="radio" id="motion1" name="motion" value="1">
-         <label for="motion1">1번 영상 - 1st Video</label><br>
-         <input type="radio" id="motion2" name="motion" value="2">
-         <label for="motion2">2번 영상 - 2nd Video</label>
-     </div>
-     <div class="question">
-         <p class="question2"></p>
-         <input type="radio" id="consistency1" name="consistency" value="1">
-         <label for="consistency1">1번 영상 - 1st Video</label><br>
-         <input type="radio" id="consistency2" name="consistency" value="2">
-         <label for="consistency2">2번 영상 - 2nd Video</label>
-     </div>
-     <div class="question">
-         <p class="question3"></p>
-         <input type="radio" id="quality1" name="quality" value="1">
-         <label for="quality1">1번 영상 - 1st Video</label><br>
-         <input type="radio" id="quality2" name="quality" value="2">
-         <label for="quality2">2번 영상 - 2nd Video</label>
-     </div>
-     </div>
-     
-     </section>
- <!-- ============================= -->
-      <!-- ============================= -->
-      <br>
-      <br>
-      <section>
-      <h2 class="subtitle has-text-centered">
-        Portrait of blinking girl with short orange hair, smooth doll face feature, intricate oil painting, high detail, sharp high detail, manga and anime 2000.
-      </h2>
-      
-      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/portrait_of_blinking_girl_with_short_orange_hair.mp4" /> 
-          </video>
-          <figcaption>1번 영상, 1st video</figcaption>
-      </figure>
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/Portrait_of_blinking_girl_with_W432H256_47.5_0.3_15_MG40___.mp4" /> 
-          </video>
-          <figcaption>2번 영상, 2nd video</figcaption>
-      </figure>
-      
-      <div class="question">
-          <p class="question1"></p>
-          <input type="radio" id="motion1" name="motion" value="1">
-          <label for="motion1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="motion2" name="motion" value="2">
-          <label for="motion2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question2"></p>
-          <input type="radio" id="consistency1" name="consistency" value="1">
-          <label for="consistency1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="consistency2" name="consistency" value="2">
-          <label for="consistency2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question3"></p>
-          <input type="radio" id="quality1" name="quality" value="1">
-          <label for="quality1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="quality2" name="quality" value="2">
-          <label for="quality2">2번 영상 - 2nd Video</label>
-      </div>
-      </div>
-      
-      </section>
-  <!-- ============================= -->
-   <!-- ============================= -->
-      <!-- ============================= -->
-      <br>
-      <br>
-      <section>
-      <h2 class="subtitle has-text-centered">
-        A panda taking a selfie.
-      </h2>
-      
-      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/A_panda_taking_a_selfie_W432H256_47.5_0.3_15_MG40___ 3.mp4" /> 
-          </video>
-          <figcaption>1번 영상, 1st video</figcaption>
-      </figure>
-      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
-              <source type="video/mp4" src="video/panda.mp4" /> 
-          </video>
-          <figcaption>2번 영상, 2nd video</figcaption>
-      </figure>
-      
-      <div class="question">
-          <p class="question1"></p>
-          <input type="radio" id="motion1" name="motion" value="1">
-          <label for="motion1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="motion2" name="motion" value="2">
-          <label for="motion2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question2"></p>
-          <input type="radio" id="consistency1" name="consistency" value="1">
-          <label for="consistency1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="consistency2" name="consistency" value="2">
-          <label for="consistency2">2번 영상 - 2nd Video</label>
-      </div>
-      <div class="question">
-          <p class="question3"></p>
-          <input type="radio" id="quality1" name="quality" value="1">
-          <label for="quality1">1번 영상 - 1st Video</label><br>
-          <input type="radio" id="quality2" name="quality" value="2">
-          <label for="quality2">2번 영상 - 2nd Video</label>
-      </div>
-      </div>
-      
-      </section>
   <!-- ============================= -->
       <br><br><br>
       <div class="columns is-centered has-text-centered">
@@ -963,9 +257,10 @@
 
     <script>
         // 질문 변수 설정
-        var question1Text = "<b>Q1.</b> 어떤 영상의 모션이 더 자연스러워 보이나요? <br> Which video appears to have more natural motion?";
+        var question1Text = "<b>Q1.</b> 어떤 동영상의 퀄리티가 더 좋나요? <br> Which video has better quality?";
         var question2Text = "<b>Q2.</b> 어떤 동영상의 연속성과 일관성이 더 좋나요? <br> Which video has better continuity and consistency?";
-        var question3Text = "<b>Q3.</b> 어떤 동영상의 퀄리티가 더 좋나요? <br> Which video has better quality?";
+        // var question3Text = "<b>Q3.</b> 어떤 동영상의 모션이 더 자연스러워 보이나요? <br> Which video appears to have more natural motion?";
+        var question3Text = "<b>Q3.</b> 어떤 동영상이 오디오와 싱크가 더 잘 맞나요? <br> Which video is better synchronized with the audio?";
       
         // 각 질문에 대한 텍스트를 모든 해당 클래스를 가진 요소에 삽입
         var questions1 = document.getElementsByClassName('question1');
