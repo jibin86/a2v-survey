@@ -1,0 +1,52 @@
+[
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-03-30-00-51-35_denoised_clip-00.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-03-30-00-51-35_denoised_clip-00.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-09-18-04-36-35-362_denoised_clip-01.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-09-18-04-36-35-362_denoised_clip-01.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-09-18-04-36-35-994_denoised_clip-02.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-09-18-04-36-35-994_denoised_clip-02.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-09-24-14-41-06-174_denoised_clip-00.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-09-24-14-41-06-174_denoised_clip-00.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-09-27-22-34-03-202_denoised_clip-00.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-09-27-22-34-03-202_denoised_clip-00.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-09-29-16-35-56-168_denoised_clip-02.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-09-29-16-35-56-168_denoised_clip-02.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-09-29-16-42-22-334_denoised_clip-00.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-09-29-16-42-22-334_denoised_clip-00.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-10-03-14-17-02-64_denoised_clip-02.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-10-03-14-17-02-64_denoised_clip-02.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-10-06-18-38-22-155_denoised_clip-01.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-10-06-18-38-22-155_denoised_clip-01.mp4",
+    "prompt": "hitting with a stick"
+  },
+  {
+    "asva": "video/asva/hitting_with_a_stick/2015-10-06-20-33-14-54_denoised_clip-02.mp4",
+    "ours": "video/ours/hitting_with_a_stick/2015-10-06-20-33-14-54_denoised_clip-02.mp4",
+    "prompt": "hitting with a stick"
+  }
+]

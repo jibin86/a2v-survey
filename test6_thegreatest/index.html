@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="description"
+              content="Synchronized Audio-to-Video Generation with Diffusion Transformers">
+        <meta name="keywords" content="Audio-to-Video">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Synchronized Audio-to-Video Generation with Diffusion Transformers</title>
+      
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+      
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+      
+          gtag('js', new Date());
+      
+          gtag('config', 'G-PYVRSFMDRL');
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var sections = document.querySelectorAll('section');
+
+                sections.forEach(function(section, sectionIndex) {
+                    var questionGroups = section.querySelectorAll('.question');
+
+                    questionGroups.forEach(function(group, groupIndex) {
+                        var radioButtons = group.querySelectorAll('input[type="radio"]');
+
+                        radioButtons.forEach(function(radio, idx) {
+                            var baseName = radio.getAttribute('name');
+                            var newName = baseName + '-section' + sectionIndex + '-group' + groupIndex;
+                            var newId = newName + '-option' + idx;
+
+                            // 먼저 새로운 ID와 name을 계산
+                            // 다음으로, 연결된 라벨의 for 속성을 업데이트
+                            var label = group.querySelector('label[for="' + radio.id + '"]');
+                            if (label) {
+                                label.setAttribute('for', newId);
+                            }
+
+                            // 마지막으로 라디오 버튼의 id와 name을 업데이트
+                            radio.setAttribute('id', newId);
+                            radio.setAttribute('name', newName);
+                        });
+                    });
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // 모든 <section> 태그를 선택
+                var sections = document.querySelectorAll('section');
+
+                // 각 <section> 태그에 대해 순회
+                sections.forEach(function (section, index) {
+                    // <h2> 태그를 찾음
+                    var subtitle = section.querySelector('.subtitle');
+
+                    // <h2> 태그가 존재하면 내용에 번호를 추가
+                    if (subtitle) {
+                        subtitle.textContent = (index) + '. ' + subtitle.textContent;
+                    }
+                });
+            });
+        </script>
+      
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+              rel="stylesheet">
+      
+        <link rel="stylesheet" href="./css/bulma.min.css">
+        <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- <script defer src="./js/fontawesome.all.min.js"></script> -->
+        <!-- <script src="./js/bulma-carousel.min.js"></script> -->
+        <!-- <script src="./js/bulma-slider.min.js"></script> -->
+        <script src="./js/index.js"></script>
+      </head>
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">Audio-to-Video Survey</h1>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">Thank you for your participation!&nbsp; </span>
+      
+                </div>
+      
+                <!-- <h1 style="font-size:24px;font-weight:bold">Thank you!</h1> -->
+                
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="columns is-centered has-text-centered">
+        <h3 class="title is-4"> This content is optimized for desktop viewing and for Chrome. <br>It may not be suitable for mobile devices or other Web browser.</h3>
+      </div>
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <h3 class="title is-4"> 본 컨텐츠는 데스크탑 화면과 크롬 브라우저에 최적화되어 있습니다. <br>모바일 기기나 다른 웹 브라우저에서는 적합하지 않을 수 있습니다.</h3>
+      </div>
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <h3 class="title is-4"> 핸드폰의 경우 가로보기로 넓은 화면에서 봐주시면 감사하겠습니다.</h3>
+      </div>
+
+      <br><br><br>
+    <div class="columns is-centered has-text-centered">
+        <h4 class="title is-5"> Videos are generated with given text, image, and audio inputs.</h4>
+    </div>
+    <div class="columns is-centered has-text-centered">
+        <h4 class="title is-5"> Please consider it and look at the questions and choose your options</h4>
+    </div>
+    <div class="columns is-centered has-text-centered">    
+        <h4 class="title is-5"> It may take a little time for all videos to load. We appreciate your patience.</h4>
+    </div>
+    <br>
+    <div class="columns is-centered has-text-centered"> 
+        <h4 class="title is-5"> 주어진 텍스트, 이미지, 오디오에 맞게 생성된 영상입니다.</h4>
+    </div>
+    <div class="columns is-centered has-text-centered"> 
+        <h4 class="title is-5"> 이를 참고하여 질문을 보시고 옵션을 선택해주세요.</h4>
+    </div>
+    <div class="columns is-centered has-text-centered"> 
+        <h4 class="title is-5"> 영상이 로드되기까지 다소 시간이 걸릴 수 있습니다. 잠시만 기다려 주시면 감사하겠습니다.</h4>
+    </div>
+    <br><br><br>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          fetch('video_pairs.json')
+            .then(response => response.json())
+            .then(data => {
+              const wrapper = document.createElement("div");
+      
+              data.forEach((pair, idx) => {
+                const section = document.createElement("section");
+                const subtitle = document.createElement("h2");
+                subtitle.className = "subtitle has-text-centered";
+                //subtitle.textContent = `${idx + 1}. Prompt for this video pair`; // 필요시 수정
+                subtitle.textContent = `${idx + 1}. ${pair.prompt}`;
+                section.appendChild(subtitle);
+      
+                const container = document.createElement("div");
+                container.className = "video-container";
+                container.style.cssText = "display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;";
+      
+                // ✅ baselineA/B 사용
+                ["asva", "ours"].forEach((key, i) => {
+                  if (!pair[key]) return;
+                  const figure = document.createElement("figure");
+                  // figure.style.cssText = "flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);";
+                  figure.style.cssText = `
+                    flex-basis: calc(50% - 10px);
+                    max-width: calc(50% - 10px);
+                    margin-bottom: 20px;  /* 👈 캡션과 문항 사이 간격 추가 */
+                  `;
+
+                  const video = document.createElement("video");
+                  // video.setAttribute("autoplay", true);
+                  // video.setAttribute("muted", true);
+                  video.setAttribute("controls", true); // ← controls만 넣어두면 유저가 직접 재생 가능
+                  // video.setAttribute("loop", true);
+                  video.setAttribute("playsinline", true);
+                  video.style.cssText = "height: 100%; width: auto; object-fit: contain;";
+                  const source = document.createElement("source");
+                  source.setAttribute("type", "video/mp4");
+                  source.setAttribute("src", pair[key]);
+                  video.appendChild(source);
+                  const caption = document.createElement("figcaption");
+                  caption.textContent = `${i + 1}번 영상, Video ${i + 1}`;
+                  figure.appendChild(video);
+                  figure.appendChild(caption);
+                  container.appendChild(figure);
+                });
+      
+                // 질문
+                ["motion", "consistency"].forEach((q, qi) => {
+                  const div = document.createElement("div");
+                  div.className = "question";
+                  const p = document.createElement("p");
+                  p.className = `question${qi + 1}`;
+                  div.appendChild(p);
+      
+                  for (let i = 1; i <= 5; i++) {
+                    const input = document.createElement("input");
+                    input.type = "radio";
+                    input.id = `${q}${i}-video${idx}`;
+                    input.name = `${q}-video${idx}`;
+                    input.value = i;
+      
+                    const label = document.createElement("label");
+                    label.setAttribute("for", input.id);
+                    label.textContent = `${i}`;
+      
+                    div.appendChild(input);
+                    div.appendChild(label);
+                    div.appendChild(document.createElement("br"));
+                  }
+                  container.appendChild(div);
+                });
+      
+                section.appendChild(container);
+                wrapper.appendChild(section);
+                wrapper.appendChild(document.createElement("br"));
+                wrapper.appendChild(document.createElement("br"));
+              });
+      
+              document.body.appendChild(wrapper);
+              const buttonWrapper = document.createElement("div");
+                buttonWrapper.className = "columns is-centered has-text-centered";
+                const submitBtn = document.createElement("button");
+                submitBtn.id = "submitBtn";
+                submitBtn.textContent = "최종제출(Submit) - 클릭 후 조금만 기다려주세요. Please wait for a while after click";
+                buttonWrapper.appendChild(submitBtn);
+                document.body.appendChild(buttonWrapper);
+                const spacer = document.createElement("div");
+                spacer.style.height = "50px"; // 원하는 높이로 조정
+                document.body.appendChild(spacer);
+
+                // 이벤트 등록
+                submitBtn.addEventListener("click", getFinalResponse);
+      
+              // ✅ 질문 텍스트는 이 시점 이후에 넣어야 함!
+              // var question1Text = "<b>Q1.</b> 어떤 영상의 이미지가 퀄리티가 더 좋나요? <br> Which video has better image quality?";
+              var question1Text = "<b>Q1.</b> 1번 영상의 오디오와 비디오의 싱크 점수를 매겨주세요 (1: 전혀 싱크 맞지 않음, 5: 완전히 싱크 맞음).";
+              var question2Text = "<b>Q2.</b> 2번 영상의 오디오와 비디오의 싱크 점수를 매겨주세요 (1: 전혀 싱크 맞지 않음, 5: 완전히 싱크 맞음).";
+      
+              var questions1 = document.getElementsByClassName('question1');
+              for (var i = 0; i < questions1.length; i++) {
+                questions1[i].innerHTML = question1Text;
+              }
+      
+              var questions2 = document.getElementsByClassName('question2');
+              for (var i = 0; i < questions2.length; i++) {
+                questions2[i].innerHTML = question2Text;
+              }
+
+            });
+        });
+      </script>
+    <br><br><br>
+
+    <!-- ============================= -->
+        <!-- <br><br><br>
+        <div class="columns is-centered has-text-centered">
+          
+          <button id="submitBtn">최종제출(Submit) - 클릭 후 조금만 기다려주세요. Please wait for a while after click</button>
+      </div>-->
+      
+<script>
+    function getFinalResponse() {
+        var submitButton = document.getElementById("submitBtn"); // 버튼 요소를 가져옵니다
+        var questions = document.querySelectorAll('.question');
+        var responses = [];
+        var allAnswered = true;
+
+        for (var i = 0; i < questions.length; i++) {
+            var checkedRadio = questions[i].querySelector('input[type="radio"]:checked');
+            
+            if (checkedRadio) {
+                responses.push(checkedRadio.value);
+            } else {
+                allAnswered = false;
+                alert("질문 " + (Math.floor(i / 2) + 1) + "에 답해야 합니다. \n Please answer question number " + (Math.floor(i / 2) + 1) + ".");
+                break;
+            }
+        }
+
+        if (allAnswered) {
+            var finalResponse = responses.join("-");
+            console.log(finalResponse); // 최종 응답 확인
+            submitButton.disabled = true; // 버튼을 비활성화합니다
+            submitButton.innerText = "처리 중..."; // 버튼 텍스트를 변경합니다
+            var survey_id = "AKfycby8Sw5ra-qX-v_q13GKlQkdkjx-0EYdywLaCjOgVBfDnAUF4KhuCxIp1wuDaDawszNJLw";
+            var test_id = 5; // ← 현재 테스트셋 번호 (1~5 중 선택)
+            window.location.href = "https://script.google.com/macros/s/" + survey_id + "/exec?response=" + finalResponse + "&test_id=" + test_id;
+            // https://script.google.com/macros/s/AKfycbwaWZfbbWu2-fhE58lQPDzEp2CNDIkV5uJjYLdIT28sOAFuums54sNWBhKcsFcMDTFJ1Q/exec
+            // AKfycbwaWZfbbWu2-fhE58lQPDzEp2CNDIkV5uJjYLdIT28sOAFuums54sNWBhKcsFcMDTFJ1Q
+            return finalResponse; // 여기서 finalResponse를 다른 곳에 사용할 수 있습니다.
+        } else {
+            return null; // 모든 질문에 답하지 않았다면 null 반환
+        }
+    }
+
+    document.getElementById("submitBtn").addEventListener("click", function() {
+        getFinalResponse();
+    });
+</script>
+
+
+    <!-- JavaScript
+    <script>
+    document.getElementById("submitBtn").addEventListener("click", function() {
+        // 사용자를 특정 URL로 리디렉션
+        window.location.href = "https://script.google.com/macros/s/AKfycbydHyrZ6CorxG70VDkdpDlXAOL6zcNtHZc433ntZP59Zclh1qv9m9k5IIxVmOuzugvecQ/exec?response=success";
+    });
+    </script> -->
+</body>
+</html>
